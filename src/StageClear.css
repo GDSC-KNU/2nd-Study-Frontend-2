@@ -1,0 +1,25 @@
+.sc-container {
+	text-align: center;
+	/* background-image: url(./image/1.jpg);
+	color: white; */
+}
+
+.sc-timer-wrapper {
+	justify-content: center;
+	display: flex;
+}
+
+.sc-timer-text {
+	width: 175px;
+	height: 175px;
+	border-radius: 100%;
+	background-color: white;
+	color: #3751769E;
+	font-size: 2.5rem;
+	font-weight: bold;
+	line-height: 175px;
+}
+
+.sc-info {
+	text-decoration: underline;
+}
