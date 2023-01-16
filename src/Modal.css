@@ -11,7 +11,7 @@
   left: calc(50% - 15rem);*/
 
   width: 60%;
-  height: 720px;
+  height: 75vh;
   padding: 1rem;
   position: relative;
   background: rgba(178, 204, 240, 0.62);
@@ -29,7 +29,7 @@
 .modalTitle {
   position: relative;
   width: 508px;
-  height: 170px;
+  height: 10vh;
 
   margin: 0 auto;
   display: flex;
