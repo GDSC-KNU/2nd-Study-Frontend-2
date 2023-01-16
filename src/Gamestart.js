@@ -1,11 +1,25 @@
-//import image from './background.png';
+import { useState } from "react";
+
 import "./Gamestart.css";
 import imgA from "./image/moon.png";
 import imgB from "./image/star1.png";
 import imgC from "./image/star2.png";
 import imgD from "./image/scoreBadge.png";
 
-function Gamestart() {
+import Modal from "./Modal";
+import Backdrop from "./Backdrop";
+
+function Gamestart(props) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function deleteHandler() {
+    setModalIsOpen(true);
+  }
+
+  function closeModalHandler() {
+    setModalIsOpen(false);
+  }
+
   return (
     <div>
       <div className="Title">
@@ -20,18 +34,19 @@ function Gamestart() {
       <div className="star2">
         <img src={imgC} width="40" height="40" alt="star2" />
       </div>
-      <div className="scoreTemplate">
+      <div className="scoreTemplate" onClick={deleteHandler}>
         <div className="scoreBadge">
           <img src={imgD} width="70" height="70" alt="scoreBadge" />
         </div>
       </div>
-
       <div className="action">
         <button className="btn">Game Start</button>
       </div>
       <div className="Third">
         <h5>Press Start button</h5>
       </div>
+      {modalIsOpen && <Modal />}
+      {modalIsOpen && <Backdrop onCancel={closeModalHandler}/>}
     </div>
   );
 }

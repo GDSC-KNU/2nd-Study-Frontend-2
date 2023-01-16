@@ -12,11 +12,9 @@ function App() {
         <Route path="/" exact>
           <Gamestart />
         </Route>
-
         <Route path="/GameOver">
           <GameOver />
         </Route>
-
         <Route path="/GameAllClear">
           <GameAllClear />
         </Route>
