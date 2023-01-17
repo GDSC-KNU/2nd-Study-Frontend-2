@@ -2,6 +2,7 @@ import styled from "styled-components";
 import backgroundImg from "./assets/images/stage1_bg.jpeg";
 import star from "./assets/images/star.png";
 import { useEffect, useRef, useState } from "react";
+import Timer from "./Timer";
 
 const Background = styled.div`
   display: flex-end;
@@ -63,7 +64,10 @@ function Game() {
           <div>
             Stage <span>1</span>
           </div>
-          <div>Timer</div>
+          <div>
+            {/* Timer */}
+            <Timer mm={1} ss={40} />
+          </div>
           <div>
             Score <span style={{ color: yellow }}>{count}</span>
           </div>
