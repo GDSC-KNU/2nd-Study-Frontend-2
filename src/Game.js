@@ -16,7 +16,7 @@ const Background = styled.div`
   }
   .Top {
     height: 50px;
-    background-color: lavender;
+    color: white;
   }
   .star {
     background-image: url(${star});
@@ -25,13 +25,13 @@ const Background = styled.div`
     height: 20px;
     border: none;
   }
-
   .Bottom {
     position: absolute;
     bottom: 0;
+    right: 0;
     height: 20px;
-    width: 100vw;
-    background-color: lightgreen;
+    width: inherit;
+    color: white;
   }
 `;
 
@@ -41,9 +41,11 @@ function Game() {
   const [left, setLeft] = useState(10);
   const [right, setRight] = useState(10);
   const [bottom, setBottom] = useState(30);
+  const [yellow, setYellow] = useState("######");
 
   const onIncrease = () => {
     setCount((prev) => prev + 5);
+    setYellow("#ffd400");
   };
 
   useEffect(() => {
@@ -63,7 +65,7 @@ function Game() {
           </div>
           <div>Timer</div>
           <div>
-            Score <span>{count}</span>
+            Score <span style={{ color: yellow }}>{count}</span>
           </div>
         </section>
         {/* middle */}
@@ -81,7 +83,9 @@ function Game() {
           ></div>
         </section>
         {/* bottom */}
-        <section className="Bottom">bottom</section>
+        <section className="Bottom">
+          <span className="exitBtn">Exit</span>
+        </section>
       </Background>
     </>
   );
