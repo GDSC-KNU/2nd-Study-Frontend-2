@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import backgroundImg from "./assets/images/stage1_bg.jpeg";
 import star from "./assets/images/star.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Background = styled.div`
   display: flex-end;
@@ -19,13 +19,10 @@ const Background = styled.div`
     background-color: lavender;
   }
   .star {
-    color: gold;
-    position: absolute;
     background-image: url(${star});
-
     background-size: 100% 100%;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border: none;
   }
 
@@ -40,9 +37,21 @@ const Background = styled.div`
 
 function Game() {
   const [count, setCount] = useState(0);
+  const [top, setTop] = useState(20);
+  const [left, setLeft] = useState(10);
+  const [right, setRight] = useState(10);
+  const [bottom, setBottom] = useState(30);
+
   const onIncrease = () => {
     setCount((prev) => prev + 5);
   };
+
+  useEffect(() => {
+    setTop(Math.floor(Math.random() * 300 + 1));
+    setLeft(Math.floor(Math.random() * 500 + 1));
+    setRight(Math.floor(Math.random() * 500 + 1));
+    setBottom(Math.floor(Math.random() * 300 + 1));
+  }, [count]);
 
   return (
     <>
@@ -59,7 +68,17 @@ function Game() {
         </section>
         {/* middle */}
         <section className="Playing">
-          <div className="star" onClick={onIncrease}></div>
+          <div
+            className="star"
+            onClick={onIncrease}
+            style={{
+              position: "absolute",
+              top: top,
+              left: left,
+              right: right,
+              bottom: bottom,
+            }}
+          ></div>
         </section>
         {/* bottom */}
         <section className="Bottom">bottom</section>
