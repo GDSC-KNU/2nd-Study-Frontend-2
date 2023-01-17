@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import Rungame from "./Rungame";
+import Game from "./Game";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Rungame />
+    <Game />
   </React.StrictMode>
 );
