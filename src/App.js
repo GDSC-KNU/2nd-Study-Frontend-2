@@ -16,19 +16,6 @@ function App() {
       <Route path="/GameAllClear" element={<GameAllClear />} />
       <Route path="/stageClear1" element={<StageClear />} />
     </Routes>
-    // <div>
-    //   <Routes>
-    //     <Route path="/" exact>
-    //       <Gamestart />
-    //     </Route>
-    //     <Route path="/GameOver">
-    //       <GameOver />
-    //     </Route>
-    //     <Route path="/GameAllClear">
-    //       <GameAllClear />
-    //     </Route>
-    //   </Routes>
-    // </div>
   );
 }
 
