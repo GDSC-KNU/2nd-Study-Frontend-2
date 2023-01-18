@@ -96,6 +96,7 @@ body {
 .btn:hover {
   background-color: #fed36b;
   border-color: #fed36b;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .Third {

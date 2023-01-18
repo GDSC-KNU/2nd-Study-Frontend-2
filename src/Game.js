@@ -14,15 +14,15 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-top: 0;
-  
+
   section {
     margin: 10px 0px;
     display: flex;
     justify-content: space-between;
     margin: 5px 20px;
     div {
-      font-size:25px;
-      font-weight:500;
+      font-size: 25px;
+      font-weight: 500;
     }
   }
   .Top {
@@ -32,8 +32,8 @@ const Background = styled.div`
   .star {
     background-image: url(${star});
     background-size: 100% 100%;
-    width: ${props=>props.width};
-    height: ${props=>props.height};
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
     border: none;
   }
   .Bottom {
@@ -45,11 +45,10 @@ const Background = styled.div`
     color: white;
     cursor: pointer;
   }
-  a{
+  a {
     color: white;
     text-decoration: none;
   }
-  
 `;
 
 function Game() {
@@ -76,7 +75,9 @@ function Game() {
 
   return (
     <>
-      <Background width={`${50 / parseInt(no)}px`} height={`${50 / parseInt(no)}px`}
+      <Background
+        width={`${50 / parseInt(no)}px`}
+        height={`${50 / parseInt(no)}px`}
         style={
           no == 2
             ? { backgroundImage: `url(${backgroundImg2})` }
@@ -92,7 +93,7 @@ function Game() {
           </div>
           <div>
             {/* Timer */}
-            <Timer mm={1} ss={40} count={count} />
+            <Timer mm={0} ss={4} count={count} />
           </div>
           <div>
             Score <span style={{ color: yellow }}>{count}</span>
@@ -115,7 +116,7 @@ function Game() {
         {/* bottom */}
         <section className="Bottom">
           <Link to="/">
-          <span className="exitBtn">Exit</span>
+            <span className="exitBtn">Exit</span>
           </Link>
         </section>
       </Background>
