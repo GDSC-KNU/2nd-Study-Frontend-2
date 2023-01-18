@@ -29,8 +29,6 @@ const Timer = ({ mm, ss, count }) => {
 						localStorage.setItem("score3", count);
 						navigate("/GameAllClear");
 					}
-					
-
 				} else {
 					setMinutes(parseInt(minutes) - 1);
 					setSeconds(59);
@@ -41,7 +39,7 @@ const Timer = ({ mm, ss, count }) => {
 	}, [minutes, seconds]);
 	
 	return (
-		<div>
+		<div style={minutes === 0 && seconds <= 10 ? {color: "#ff0000"} : {color: "#ffffff"}}>
 			{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
 		</div>
 	);

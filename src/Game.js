@@ -92,7 +92,7 @@ function Game() {
           </div>
           <div>
             {/* Timer */}
-            <Timer mm={1} ss={40} count={count} />
+            <Timer mm={1} ss={30} count={count} />
           </div>
           <div>
             Score <span style={{ color: yellow }}>{count}</span>
