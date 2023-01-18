@@ -1,13 +1,35 @@
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./StageClear.css";
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import backgroundImg1 from "./assets/images/stage1_bg.jpeg";
+import backgroundImg2 from "./assets/images/stage2_bg.jpeg";
+import backgroundImg3 from "./assets/images/stage3_bg.jpeg";
 
 const StageClear = () => {
+  let { no } = useParams();
+  const navigate = useNavigate();
+
   const onComplete = () => {
-    console.log("complete");
+    if (no == 1) {
+      navigate("/game/2");
+    }
+    if (no == 2) {
+      navigate("/game/3");
+    }
   };
   return (
-    <div className="sc-container">
+    <div 
+      className="sc-container"
+      style={
+        no == 2
+          ? { backgroundImage: `url(${backgroundImg2})` }
+          : no == 3
+          ? { backgroundImage: `url(${backgroundImg3})` }
+          : { backgroundImage: `url(${backgroundImg1})` }
+      }
+    >
       <h1>Stage Clear!</h1>
       <div className="sc-timer-wrapper">
         <CountdownCircleTimer

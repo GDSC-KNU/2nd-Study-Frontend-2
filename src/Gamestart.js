@@ -8,6 +8,7 @@ import imgD from "./image/scoreBadge.png";
 
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
+import { Link } from "react-router-dom";
 
 function Gamestart(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -40,7 +41,9 @@ function Gamestart(props) {
         </div>
       </div>
       <div className="action">
-        <button className="btn">Game Start</button>
+        <Link to="/game/1">
+          <button className="btn">Game Start</button>
+        </Link>
       </div>
       <div className="Third">
         <h5>Press Start button</h5>

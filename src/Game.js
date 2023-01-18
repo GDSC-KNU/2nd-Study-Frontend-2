@@ -1,19 +1,29 @@
 import styled from "styled-components";
-import backgroundImg from "./assets/images/stage1_bg.jpeg";
+import backgroundImg1 from "./assets/images/stage1_bg.jpeg";
+import backgroundImg2 from "./assets/images/stage2_bg.jpeg";
+import backgroundImg3 from "./assets/images/stage3_bg.jpeg";
 import star from "./assets/images/star.png";
 import { useEffect, useState } from "react";
 import Timer from "./Timer";
+import { Link, useParams } from "react-router-dom";
 
 const Background = styled.div`
   display: flex-end;
-  background-image: url(${backgroundImg});
+  background-image: url(${backgroundImg1});
   height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  margin-top: 0;
+  
   section {
     margin: 10px 0px;
     display: flex;
     justify-content: space-between;
+    margin: 5px 20px;
+    div {
+      font-size:25px;
+      font-weight:500;
+    }
   }
   .Top {
     height: 50px;
@@ -22,18 +32,24 @@ const Background = styled.div`
   .star {
     background-image: url(${star});
     background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
+    width: ${props=>props.width};
+    height: ${props=>props.height};
     border: none;
   }
   .Bottom {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 20px;
+    bottom: -7vh;
+    right: 8.7vw;
+    height: 20vh;
     width: inherit;
     color: white;
+    cursor: pointer;
   }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
 `;
 
 function Game() {
@@ -43,6 +59,8 @@ function Game() {
   const [right, setRight] = useState(10);
   const [bottom, setBottom] = useState(30);
   const [yellow, setYellow] = useState("######");
+
+  let { no } = useParams();
 
   const onIncrease = () => {
     setCount((prev) => prev + 5);
@@ -58,15 +76,23 @@ function Game() {
 
   return (
     <>
-      <Background>
+      <Background width={`${50 / parseInt(no)}px`} height={`${50 / parseInt(no)}px`}
+        style={
+          no == 2
+            ? { backgroundImage: `url(${backgroundImg2})` }
+            : no == 3
+            ? { backgroundImage: `url(${backgroundImg3})` }
+            : { backgroundImage: `url(${backgroundImg1})` }
+        }
+      >
         {/* top */}
         <section className="Top">
           <div>
-            Stage <span>1</span>
+            Stage <span>{no}</span>
           </div>
           <div>
             {/* Timer */}
-            <Timer mm={1} ss={40} />
+            <Timer mm={1} ss={40} count={count} />
           </div>
           <div>
             Score <span style={{ color: yellow }}>{count}</span>
@@ -88,7 +114,9 @@ function Game() {
         </section>
         {/* bottom */}
         <section className="Bottom">
+          <Link to="/">
           <span className="exitBtn">Exit</span>
+          </Link>
         </section>
       </Background>
     </>

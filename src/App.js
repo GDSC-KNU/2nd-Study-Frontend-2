@@ -8,13 +8,16 @@ import StageClear from './StageClear';
 
 
 function App() {
+  localStorage.setItem("score1", 0);
+  localStorage.setItem("score2", 0);
+  localStorage.setItem("score3", 0);
   return (
     <Routes>
       <Route path="/" element={<Gamestart />} />
-      <Route path="/game" element={<Game />} />
+      <Route path="/game/:no" element={<Game />} />
       <Route path="/GameOver" element={<GameOver />} />
       <Route path="/GameAllClear" element={<GameAllClear />} />
-      <Route path="/stageClear1" element={<StageClear />} />
+      <Route path="/stageClear/:no" element={<StageClear />} />
     </Routes>
   );
 }
