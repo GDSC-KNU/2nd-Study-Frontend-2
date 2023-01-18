@@ -1,0 +1,98 @@
+body{
+  background-image: url("./image/background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.TemplateBox {
+  width: 30%;
+  height: 81.5vh;
+
+  position: relative;
+  background: rgba(178, 204, 240, 0.62);
+  border-radius: 50px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+  
+  margin: 0 auto; /* 페이지 중앙에 나타나도록 설정 */
+  
+  margin-top: 96px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gover {
+  height: 15rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 682;
+  font-size: 48px;
+  color: #011D67;
+}
+.again {
+  height: 0.1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 682;
+  font-size: 35px;
+  color: rgba(55, 81, 118, 0.79);
+}
+
+.score {
+  height: 13rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration-line: underline;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 682;
+  font-size: 35px;
+  color: #F4EDED;
+}
+
+.rebtn {
+  cursor: pointer;
+  border-radius: 15px;
+  margin: auto;
+
+  
+  width: 220px;
+  height: 66px;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 66px;
+  /* identical to box height */
+
+  color: #686666;
+
+  border: 0.5px solid #000000;
+  transform: rotate(0.63deg);
+}
+
+.rebtn:hover {
+  background-color: #fed36b;
+  border-color: #fed36b;
+}

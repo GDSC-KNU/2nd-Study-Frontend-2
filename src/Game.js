@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import backgroundImg from "./assets/images/stage1_bg.jpeg";
 import star from "./assets/images/star.png";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Timer from "./Timer";
 
 const Background = styled.div`
