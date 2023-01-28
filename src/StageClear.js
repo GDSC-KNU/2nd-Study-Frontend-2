@@ -22,15 +22,15 @@ const StageClear = () => {
   return (
     <div 
       className="sc-container"
-      style={
-        no == 2
-          ? { backgroundImage: `url(${backgroundImg2})` }
-          : no == 3
-          ? { backgroundImage: `url(${backgroundImg3})` }
-          : { backgroundImage: `url(${backgroundImg1})` }
-      }
+      // style={
+      //   no == 2
+      //     ? { backgroundImage: `url(${backgroundImg2})` }
+      //     : no == 3
+      //     ? { backgroundImage: `url(${backgroundImg3})` }
+      //     : { backgroundImage: `url(${backgroundImg1})` }
+      // }
     >
-      <h1>Stage Clear!</h1>
+      <h1 className="sc-h1">Stage Clear!</h1>
       <div className="sc-timer-wrapper">
         <CountdownCircleTimer
           isPlaying

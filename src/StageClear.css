@@ -2,6 +2,15 @@
 	text-align: center;
 	/* background-image: url(./image/1.jpg); */
 	color: white;
+	width: 100%;
+	height: 100%;
+	margin-top: 120px;
+}
+
+.sc-h1 {
+	font-size: 3rem;
+	margin-bottom: 50px;
+	color: #fed36b;
 }
 
 .sc-timer-wrapper {
@@ -21,5 +30,6 @@
 }
 
 .sc-info {
+	margin-top: 50px;
 	text-decoration: underline;
 }
