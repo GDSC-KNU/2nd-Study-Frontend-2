@@ -1,4 +1,4 @@
-body{
+body {
   background-image: url("./image/background.png");
   background-repeat: no-repeat;
   background-position: top center;
@@ -14,9 +14,9 @@ body{
   background: rgba(178, 204, 240, 0.62);
   border-radius: 50px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
-  
+
   margin: 0 auto; /* 페이지 중앙에 나타나도록 설정 */
-  
+
   margin-top: 96px;
   margin-bottom: 32px;
   display: flex;
@@ -34,7 +34,7 @@ body{
   font-style: normal;
   font-weight: 682;
   font-size: 48px;
-  color: #011D67;
+  color: #011d67;
 }
 .again {
   height: 0.1rem;
@@ -58,11 +58,11 @@ body{
   justify-content: center;
 
   text-decoration-line: underline;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 682;
   font-size: 35px;
-  color: #F4EDED;
+  color: #f4eded;
 }
 
 .rebtn {
@@ -70,15 +70,13 @@ body{
   border-radius: 15px;
   margin: auto;
 
-  
   width: 220px;
   height: 66px;
   top: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
+
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
