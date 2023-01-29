@@ -4,8 +4,7 @@ import Gamestart from "./Gamestart";
 import GameOver from "./GameOver";
 import GameAllClear from "./GameAllClear";
 import Game from "./Game";
-import StageClear from './StageClear';
-
+import StageClear from "./StageClear";
 
 function App() {
   localStorage.setItem("score1", 0);

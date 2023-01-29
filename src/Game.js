@@ -67,10 +67,10 @@ function Game() {
   };
 
   useEffect(() => {
-    setTop(Math.floor(Math.random() * 300 + 1));
-    setLeft(Math.floor(Math.random() * 500 + 1));
-    setRight(Math.floor(Math.random() * 500 + 1));
-    setBottom(Math.floor(Math.random() * 300 + 1));
+    setTop(Math.floor(Math.random() * 700 + 1));
+    setLeft(Math.floor(Math.random() * 800 + 1));
+    setRight(Math.floor(Math.random() * 700 + 1));
+    setBottom(Math.floor(Math.random() * 800 + 1));
   }, [count]);
 
   return (
