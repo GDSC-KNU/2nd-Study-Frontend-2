@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./Gamestart.css";
 
+import "./Gamestart.css";
 import imgA from "./image/moon.png";
 import imgB from "./image/star1.png";
 import imgC from "./image/star2.png";
@@ -10,7 +10,7 @@ import Modal from "./Modal";
 import Backdrop from "./Backdrop";
 import { Link } from "react-router-dom";
 
-function Gamestart(props) {
+function GamestartM(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function deleteHandler() {
@@ -54,4 +54,4 @@ function Gamestart(props) {
   );
 }
 
-export default Gamestart;
+export default GamestartM;
