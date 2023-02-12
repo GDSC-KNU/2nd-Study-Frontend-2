@@ -20,7 +20,7 @@ function GameAllClear() {
           </h2>
         </div>
         <div className="ThirdTitle">
-          <h5>Press any button</h5>
+          <h5>Click any Where!</h5>
         </div>
       </div>
     </Link>

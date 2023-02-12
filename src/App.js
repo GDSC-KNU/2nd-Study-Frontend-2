@@ -16,6 +16,7 @@ function App() {
     <>
       {/* pc */}
       <MediaQuery minWidth={1024} maxWidth={1279}>
+        <Music />
         <Routes>
           <Route path="/" element={<Gamestart />} />
           <Route path="/game/:no" element={<Game />} />
@@ -23,11 +24,11 @@ function App() {
           <Route path="/GameAllClear" element={<GameAllClear />} />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
-        <Music />
       </MediaQuery>
 
       {/* mobile */}
       <MediaQuery minWidth={450}>
+        <Music />
         <Routes>
           <Route path="/" element={<Gamestart />} />
           <Route path="/game/:no" element={<Game />} />
@@ -35,7 +36,6 @@ function App() {
           <Route path="/GameAllClear" element={<GameAllClear />} />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
-        <Music />
       </MediaQuery>
     </>
   );

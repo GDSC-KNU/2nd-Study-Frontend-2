@@ -6,6 +6,7 @@ import star from "./assets/images/star.png";
 import { useEffect, useState } from "react";
 import Timer from "./Timer";
 import { Link, useParams } from "react-router-dom";
+import Music from "./Music";
 
 const Background = styled.div`
   display: flex-end;
@@ -120,6 +121,7 @@ function Game() {
           </Link>
         </section>
       </Background>
+      <Music />
     </>
   );
 }
