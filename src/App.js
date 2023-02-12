@@ -6,6 +6,8 @@ import GameAllClear from "./GameAllClear";
 import Game from "./Game";
 import StageClear from "./StageClear";
 import MediaQuery from "react-responsive";
+import Music from "./Music";
+
 function App() {
   localStorage.setItem("score1", 0);
   localStorage.setItem("score2", 0);
@@ -21,6 +23,7 @@ function App() {
           <Route path="/GameAllClear" element={<GameAllClear />} />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
+        <Music />
       </MediaQuery>
 
       {/* mobile */}
@@ -32,6 +35,7 @@ function App() {
           <Route path="/GameAllClear" element={<GameAllClear />} />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
+        <Music />
       </MediaQuery>
     </>
   );
