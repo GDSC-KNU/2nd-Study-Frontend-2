@@ -2,7 +2,37 @@ import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import "./GameAllClear.css";
+import styled from "styled-components";
 //import background from "./image/background.png";
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    /*text-align: center;*/
+    font-family: "DotGothic16", sans-serif;
+    color: #fed36b;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 269px;
+    font-size: ${(props) => props.fontsize};
+  }
+`;
+
+const SecondTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  h2 {
+    font-family: "DotGothic16", sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 45px;
+    font-size: ${(props) => props.fontsize};
+  }
+`;
 
 function GameAllClear(props) {
   const [scores, setScores] = useState({});
@@ -103,22 +133,35 @@ function GameAllClear(props) {
     }
   }
   return (
-    <Link to="/">
-      <div>
-        <div className="Title"></div>
-        <div className="SecondTitle">
-          <h2>
-            You Cleared All Stages!!
-            <br />
-            Your score is{" "}
-            {parseInt(score1) + parseInt(score2) + parseInt(score3)}
-          </h2>
-        </div>
+    <div>
+      <Title
+        fontsize={
+          props.minWidth === 1024 && props.minWidth < 1300
+            ? `${80}px`
+            : `${38}px`
+        }
+      >
+        <h1>Congratulations!</h1>
+      </Title>
+      <SecondTitle
+        fontsize={
+          props.minWidth === 1024 && props.minWidth < 1300
+            ? `${40}px`
+            : `${24}px`
+        }
+      >
+        <h2>
+          You Cleared All Stages!!
+          <br />
+          Your score is {parseInt(score1) + parseInt(score2) + parseInt(score3)}
+        </h2>
+      </SecondTitle>
+      <Link to="/">
         <div className="ThirdTitle">
           <h5>Click Here!</h5>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
