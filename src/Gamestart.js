@@ -7,6 +7,7 @@ import imgC from "./image/star2.png";
 import imgD from "./image/scoreBadge.png";
 import imgE from "./image/coding.png";
 
+
 import Modal from "./Modal";
 import IntroModal from "./IntroModal";
 import Backdrop from "./Backdrop";

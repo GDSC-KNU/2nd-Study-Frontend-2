@@ -3,8 +3,8 @@ import music3 from "./audios/10_유예근-My Victory.mp3";
 import music4 from "./audios/Story of the queen.mp3";
 import "./Music.css";
 
-import imgE from "./image/start.png";
-import imgF from "./image/stop.png";
+import imgE from "./image/play.png";
+import imgF from "./image/start.png";
 
 const useMultiAudio = (urls) => {
   urls = { music: [music4] };
