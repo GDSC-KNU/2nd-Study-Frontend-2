@@ -121,7 +121,7 @@ function Game() {
           </Link>
         </section>
       </Background>
-      <Music />
+
     </>
   );
 }
