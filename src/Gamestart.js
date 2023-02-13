@@ -8,8 +8,24 @@ import imgD from "./image/scoreBadge.png";
 
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import styled from "styled-components";
 //import Music from "./Music";
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    /*text-align: center;*/
+    font-family: "DotGothic16", sans-serif;
+    color: #fed36b;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 269px;
+    font-size: ${(props) => props.fontsize};
+  }
+`;
 
 function Gamestart(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -24,9 +40,15 @@ function Gamestart(props) {
 
   return (
     <div>
-      <div className="Title">
+      <Title
+        fontsize={
+          props.minWidth === 1024 && props.minWidth < 1300
+            ? `${60}px`
+            : `${45}px`
+        }
+      >
         <h1>Catch Your Star!</h1>
-      </div>
+      </Title>
       <div className="Moon">
         <img src={imgA} width="290.18" height="278.59" alt="moon" />
       </div>
@@ -49,7 +71,7 @@ function Gamestart(props) {
       <div className="Third">
         <h5>Click Start button</h5>
       </div>
-      
+
       {modalIsOpen && <Modal />}
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
     </div>
