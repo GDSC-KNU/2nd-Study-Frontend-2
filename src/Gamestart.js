@@ -24,7 +24,7 @@ const Title = styled.div`
     color: #fed36b;
     font-style: normal;
     font-weight: 800;
-    line-height: 269px;
+    line-height: 180px;
     font-size: ${(props) => props.fontsize};
   }
 `;
@@ -54,7 +54,7 @@ function Gamestart(props) {
       <Title
         fontsize={
           props.minWidth === 1024 && props.minWidth < 1300
-            ? `${60}px`
+            ? `${90}px`
             : `${38}px`
         }
       >
@@ -71,12 +71,12 @@ function Gamestart(props) {
       </div>
       <div className="scoreTemplate" onClick={deleteHandler}>
         <div className="scoreBadge">
-          <img src={imgD} width="70" height="70" alt="scoreBadge" />
+          <img src={imgD} width="65" height="65" alt="scoreBadge" />
         </div>
       </div>
       <div className="introTemplate" onClick={deleteHandler2}>
         <div className="introBadge">
-          <img src={imgE} width="70" height="70" alt="introBadge" />
+          <img src={imgE} width="65" height="65" alt="introBadge" />
         </div>
       </div>
       <div className="action">

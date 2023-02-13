@@ -11,6 +11,7 @@
 .scoreTemplate {
   width: 5%;
   height: 78px;
+  cursor: pointer;
 
   position: absolute;
   background: rgba(178, 204, 240, 0.62);
@@ -30,6 +31,7 @@
 .introTemplate {
   width: 5%;
   height: 78px;
+  cursor: pointer;
 
   position: absolute;
   background: rgba(178, 204, 240, 0.62);
@@ -47,21 +49,30 @@
 }
 
 .scoreBadge {
+  transform: translate(0, 15%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.introBadge{
+  transform: translate(0, 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top : 20%;
+}
+
 .Moon {
   position: absolute;
-  top: 55.5%;
+  top: 50.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .star1 {
   position: absolute;
-  top: 47%;
+  top: 42%;
   left: 48%;
   transform: translate(-50%, -50%);
   margin-right: 2rem;
@@ -70,7 +81,7 @@
 
 .star2 {
   position: absolute;
-  top: 47%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-left: 2rem;

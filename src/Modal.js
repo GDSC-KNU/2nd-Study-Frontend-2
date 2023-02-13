@@ -27,40 +27,40 @@ function Modal() {
       </div>
       <div className="rank First">
         <div className="circle circle1">
-          <img src={imgE} width="79" height="79" alt="Ellipse 5" />
+          <img src={imgE} width="50" height="50" alt="Ellipse 5" />
           <div className="Gold">
-            <img src={imgB} width="69" height="69" alt="badge (2) 1" />
+            <img src={imgB} width="40" height="40" alt="badge (2) 1" />
           </div>
         </div>
         <div className="top-score">{scores.first}</div>
       </div>
       <div className="Second">
         <div className="circle2">
-          <img src={imgF} width="79" height="79" alt="Ellipse 6" />
+          <img src={imgF} width="50" height="50" alt="Ellipse 6" />
           <div className="Silver">
-            <img src={imgA} width="69" height="69" alt="badge (1) 1" />
+            <img src={imgA} width="40" height="40" alt="badge (1) 1" />
           </div>
         </div>
         <div className="top-score">{scores.second}</div>
       </div>
       <div className="Thrid">
         <div className="circle3">
-          <img src={imgG} width="79" height="79" alt="Ellipse 7" />
+          <img src={imgG} width="50" height="50" alt="Ellipse 7" />
           <div className="Bronze">
-            <img src={imgD} width="69" height="69" alt="badge (4) 1" />
+            <img src={imgD} width="40" height="40" alt="badge (4) 1" />
           </div>
         </div>
         <div className="top-score">{scores.third}</div>
       </div>
       <div className="Fourth">
         <div className="circle4">
-          <img src={imgC} width="69" height="69" alt="badge (3) 1" />
+          <img src={imgC} width="40" height="40" alt="badge (3) 1" />
         </div>
         <div className="top-score">{scores.fourth}</div>
       </div>
       <div className="Fifth">
         <div className="circle5">
-          <img src={imgH} width="69" height="69" alt="badge 1" />
+          <img src={imgH} width="40" height="40" alt="badge 1" />
         </div>
         <div className="top-score">{scores.fifth}</div>
       </div>

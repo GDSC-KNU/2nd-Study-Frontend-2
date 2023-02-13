@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
 .Modal {
   /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -10,20 +12,20 @@
   top: 100px;
   left: calc(50% - 15rem);*/
 
-  width: 60%;
-  height: 75vh;
+  width: 40%;
+  height: 50vh;
   padding: 1rem;
   position: relative;
-  background: rgba(178, 204, 240, 0.62);
-  border-radius: 50px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-
-  margin: 0 auto; /* 페이지 중앙에 나타나도록 설정 */
-  z-index: 10;
-  margin-top: 96px;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
+    background: rgba(178, 204, 240, 0.62);
+    border-radius: 50px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  
+    margin: 0 auto; /* 페이지 중앙에 나타나도록 설정 */
+    z-index: 10;
+    margin-top: 0px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
 }
 
 .modalTitle {
@@ -36,10 +38,10 @@
   align-items: center;
   justify-content: center;
 
-  font-family: 'DotGothic16', sans-serif;
+  font-family: "DotGothic16", sans-serif;
   font-style: normal;
   font-weight: 649;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 108px;
 
   color: #ffde66;
@@ -95,10 +97,10 @@
 }
 
 .circle5 {
-    position: absolute;
-    top: 89%;
-    left: 18%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 89%;
+  left: 18%;
+  transform: translate(-50%, -50%);
 }
 
 .top-score {
@@ -107,9 +109,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter';
+  font-family: 'DotGothic16', sans-serif;
   font-style: normal;
   font-weight: 682;
   font-size: 40px;
-  color: #F4EDED;
+  color: #f4eded;
 }
