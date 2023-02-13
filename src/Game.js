@@ -6,7 +6,6 @@ import star from "./assets/images/star.png";
 import { useEffect, useState } from "react";
 import Timer from "./Timer";
 import { Link, useParams } from "react-router-dom";
-import Music from "./Music";
 
 const Background = styled.div`
   display: flex-end;
@@ -52,7 +51,7 @@ const Background = styled.div`
   }
 `;
 
-function Game() {
+function Game(props) {
   const [count, setCount] = useState(0);
   const [top, setTop] = useState(20);
   const [left, setLeft] = useState(10);
@@ -68,10 +67,34 @@ function Game() {
   };
 
   useEffect(() => {
-    setTop(Math.floor(Math.random() * 400 + 1));
-    setLeft(Math.floor(Math.random() * 300 + 1));
-    setRight(Math.floor(Math.random() * 300 + 1));
-    setBottom(Math.floor(Math.random() * 300 + 1));
+    setTop(
+      Math.floor(
+        Math.random() *
+          `${props.minWidth >= 370 && props.minWidth < 1023 ? 600 : 650}` +
+          1
+      )
+    );
+    setLeft(
+      Math.floor(
+        Math.random() *
+          `${props.minWidth >= 370 && props.minWidth < 1023 ? 300 : 1000}` +
+          1
+      )
+    );
+    setRight(
+      Math.floor(
+        Math.random() *
+          `${props.minWidth >= 370 && props.minWidth < 1023 ? 300 : 1000}` +
+          1
+      )
+    );
+    setBottom(
+      Math.floor(
+        Math.random() *
+          `${props.minWidth >= 370 && props.minWidth < 1023 ? 600 : 650}` +
+          1
+      )
+    );
   }, [count]);
 
   return (

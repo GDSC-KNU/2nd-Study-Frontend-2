@@ -34,6 +34,10 @@ const SecondTitle = styled.div`
   }
 `;
 
+const Text = styled.span`
+  color: #fed36b;
+`;
+
 function GameAllClear(props) {
   const [scores, setScores] = useState({});
   const score1 = localStorage.getItem("score1");
@@ -153,7 +157,8 @@ function GameAllClear(props) {
         <h2>
           You Cleared All Stages!!
           <br />
-          Your score is {parseInt(score1) + parseInt(score2) + parseInt(score3)}
+          Your score is{" "}
+          <Text>{parseInt(score1) + parseInt(score2) + parseInt(score3)}</Text>
         </h2>
       </SecondTitle>
       <Link to="/">

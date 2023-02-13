@@ -19,7 +19,7 @@ function App() {
         <Music />
         <Routes>
           <Route path="/" element={<Gamestart minWidth={1024} />} />
-          <Route path="/game/:no" element={<Game />} />
+          <Route path="/game/:no" element={<Game minWidth={1024} />} />
           <Route path="/GameOver" element={<GameOver />} />
           <Route
             path="/GameAllClear"
@@ -34,7 +34,7 @@ function App() {
         <Music />
         <Routes>
           <Route path="/" element={<Gamestart minWidth={450} />} />
-          <Route path="/game/:no" element={<Game />} />
+          <Route path="/game/:no" element={<Game minWidth={370} />} />
           <Route path="/GameOver" element={<GameOver />} />
           <Route
             path="/GameAllClear"
