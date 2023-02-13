@@ -15,10 +15,10 @@ function App() {
   return (
     <>
       {/* pc */}
-      <MediaQuery minWidth={1024} maxWidth={1279}>
+      <MediaQuery minWidth={1024}>
         <Music />
         <Routes>
-          <Route path="/" element={<Gamestart />} />
+          <Route path="/" element={<Gamestart minWidth={1024} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
           <Route path="/GameAllClear" element={<GameAllClear />} />
@@ -27,10 +27,10 @@ function App() {
       </MediaQuery>
 
       {/* mobile */}
-      <MediaQuery minWidth={450}>
+      <MediaQuery minWidth={390} maxWidth={1023}>
         <Music />
         <Routes>
-          <Route path="/" element={<Gamestart />} />
+          <Route path="/" element={<Gamestart minWidth={450} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
           <Route path="/GameAllClear" element={<GameAllClear />} />
