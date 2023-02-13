@@ -17,7 +17,7 @@ import styled from "styled-components";
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  
+
   h1 {
     /*text-align: center;*/
     font-family: "DotGothic16", sans-serif;
@@ -92,8 +92,7 @@ function Gamestart(props) {
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
       {modalIsOpen2 && <IntroModal />}
       {modalIsOpen2 && <Backdrop onCancel={closeModalHandler2} />}
-
-    </div>
+    </>
   );
 }
 

@@ -30,7 +30,7 @@ function App() {
       </MediaQuery>
 
       {/* mobile */}
-      <MediaQuery minWidth={390} maxWidth={1023}>
+      <MediaQuery minWidth={370} maxWidth={1023}>
         <Music />
         <Routes>
           <Route path="/" element={<Gamestart minWidth={450} />} />
