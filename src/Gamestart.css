@@ -75,26 +75,6 @@
   transform: translate(-50%, -50%);
   margin-left: 2rem;
 }
-/* 
-.Title {
-  position: absolute;
-  left: 3.25%;
-  right: 3.25%;
-  top: 10%;
-  bottom: 14.04%;
-
-  /*text-align: center;*/
-/* font-family: "DotGothic16", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-<<<<<<< HEAD
-  line-height: 269px;
- 
-}
-=======
-  line-height: 269px; */
-/* }  */
 
 .action {
   width: 300px;
