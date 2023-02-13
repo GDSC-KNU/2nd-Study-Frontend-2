@@ -44,7 +44,7 @@ function Gamestart(props) {
         fontsize={
           props.minWidth === 1024 && props.minWidth < 1300
             ? `${60}px`
-            : `${45}px`
+            : `${40}px`
         }
       >
         <h1>Catch Your Star!</h1>
