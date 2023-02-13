@@ -1,8 +1,11 @@
-.soundBadge{ 
-    cursor: pointer;
-    display: inline;
-    width: 40px;
-    height: 40px;
-    float: right;
-    margin: 5px 20px;
+.soundBadge {
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 5px 20px;
+  position: fixed;
+  top: 40px;
+  right: 50px;
 }

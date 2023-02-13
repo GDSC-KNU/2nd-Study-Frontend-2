@@ -21,19 +21,25 @@ function App() {
           <Route path="/" element={<Gamestart minWidth={1024} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
-          <Route path="/GameAllClear" element={<GameAllClear />} />
+          <Route
+            path="/GameAllClear"
+            element={<GameAllClear minWidth={1024} />}
+          />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
       </MediaQuery>
 
       {/* mobile */}
-      <MediaQuery minWidth={390} maxWidth={1023}>
+      <MediaQuery minWidth={370} maxWidth={1023}>
         <Music />
         <Routes>
           <Route path="/" element={<Gamestart minWidth={450} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
-          <Route path="/GameAllClear" element={<GameAllClear />} />
+          <Route
+            path="/GameAllClear"
+            element={<GameAllClear minWidth={450} />}
+          />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
       </MediaQuery>

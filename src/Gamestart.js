@@ -41,27 +41,27 @@ function Gamestart(props) {
     setModalIsOpen(false);
   }
 
-  function deleteHandler2(){
+  function deleteHandler2() {
     setModalIsOpen2(true);
   }
 
-  function closeModalHandler2(){
+  function closeModalHandler2() {
     setModalIsOpen2(false);
   }
 
   return (
-    <div>
+    <>
       <Title
         fontsize={
           props.minWidth === 1024 && props.minWidth < 1300
             ? `${60}px`
-            : `${45}px`
+            : `${38}px`
         }
       >
         <h1>Catch Your Star!</h1>
       </Title>
       <div className="Moon">
-        <img src={imgA} width="290.18" height="278.59" alt="moon" />
+        <img src={imgA} width="300" height="278.59" alt="moon" />
       </div>
       <div className="star1">
         <img src={imgB} width="40" height="40" alt="star1" />
@@ -76,7 +76,7 @@ function Gamestart(props) {
       </div>
       <div className="introTemplate" onClick={deleteHandler2}>
         <div className="introBadge">
-          <img src={imgE} widtth="70" height="70" alt="introBadge" />
+          <img src={imgE} width="70" height="70" alt="introBadge" />
         </div>
       </div>
       <div className="action">
@@ -92,8 +92,7 @@ function Gamestart(props) {
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
       {modalIsOpen2 && <IntroModal />}
       {modalIsOpen2 && <Backdrop onCancel={closeModalHandler2} />}
-
-    </div>
+    </>
   );
 }
 

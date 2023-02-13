@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 .body {
-  background-image: url("./image/background.png");
+  /* background-image: url("./image/background.png"); */
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -64,35 +64,17 @@
   top: 47%;
   left: 48%;
   transform: translate(-50%, -50%);
+  margin-right: 2rem;
+  margin-left: -0.37rem;
 }
 
 .star2 {
   position: absolute;
   top: 47%;
-  left: 52%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  margin-left: 2rem;
 }
-/* 
-.Title {
-  position: absolute;
-  left: 3.25%;
-  right: 3.25%;
-  top: 10%;
-  bottom: 14.04%;
-
-  /*text-align: center;*/
-/* font-family: "DotGothic16", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-
-  line-height: 269px;
- 
-}
-=======
-  line-height: 269px; */
-/* }  */
-
 
 .action {
   width: 300px;
