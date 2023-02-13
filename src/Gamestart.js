@@ -5,14 +5,17 @@ import imgA from "./image/moon.png";
 import imgB from "./image/star1.png";
 import imgC from "./image/star2.png";
 import imgD from "./image/scoreBadge.png";
+import imgE from "./image/coding.png";
 
 import Modal from "./Modal";
+import IntroModal from "./IntroModal";
 import Backdrop from "./Backdrop";
 import { Link } from "react-router-dom";
 //import Music from "./Music";
 
 function Gamestart(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen2, setModalIsOpen2] = useState(false);
 
   function deleteHandler() {
     setModalIsOpen(true);
@@ -20,6 +23,14 @@ function Gamestart(props) {
 
   function closeModalHandler() {
     setModalIsOpen(false);
+  }
+
+  function deleteHandler2(){
+    setModalIsOpen2(true);
+  }
+
+  function closeModalHandler2(){
+    setModalIsOpen2(false);
   }
 
   return (
@@ -41,6 +52,11 @@ function Gamestart(props) {
           <img src={imgD} width="70" height="70" alt="scoreBadge" />
         </div>
       </div>
+      <div className="introTemplate" onClick={deleteHandler2}>
+        <div className="introBadge">
+          <img src={imgE} widtth="70" height="70" alt="introBadge" />
+        </div>
+      </div>
       <div className="action">
         <Link to="/game/1">
           <button className="btn">Game Start</button>
@@ -52,6 +68,9 @@ function Gamestart(props) {
       
       {modalIsOpen && <Modal />}
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
+      {modalIsOpen2 && <IntroModal />}
+      {modalIsOpen2 && <Backdrop onCancel={closeModalHandler2} />}
+
     </div>
   );
 }
