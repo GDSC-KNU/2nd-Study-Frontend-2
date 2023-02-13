@@ -93,7 +93,7 @@ function Gamestart(props) {
       {modalIsOpen2 && <IntroModal />}
       {modalIsOpen2 && <Backdrop onCancel={closeModalHandler2} />}
 
-    </div>
+    </>
   );
 }
 
