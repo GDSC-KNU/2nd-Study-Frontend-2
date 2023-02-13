@@ -21,7 +21,10 @@ function App() {
           <Route path="/" element={<Gamestart minWidth={1024} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
-          <Route path="/GameAllClear" element={<GameAllClear />} />
+          <Route
+            path="/GameAllClear"
+            element={<GameAllClear minWidth={1024} />}
+          />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
       </MediaQuery>
@@ -33,7 +36,10 @@ function App() {
           <Route path="/" element={<Gamestart minWidth={450} />} />
           <Route path="/game/:no" element={<Game />} />
           <Route path="/GameOver" element={<GameOver />} />
-          <Route path="/GameAllClear" element={<GameAllClear />} />
+          <Route
+            path="/GameAllClear"
+            element={<GameAllClear minWidth={450} />}
+          />
           <Route path="/stageClear/:no" element={<StageClear />} />
         </Routes>
       </MediaQuery>

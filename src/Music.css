@@ -1,3 +1,11 @@
-.soundBadge{
-    cursor: pointer;
+.soundBadge {
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 5px 20px;
+  position: fixed;
+  top: 40px;
+  right: 50px;
 }

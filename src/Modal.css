@@ -87,17 +87,29 @@
   transform: translate(-50%, -50%);
 }
 
-.Fourth {
+.circle4 {
   position: absolute;
   top: 73%;
   left: 18%;
   transform: translate(-50%, -50%);
 }
 
-.Fifth {
+.circle5 {
     position: absolute;
     top: 89%;
     left: 18%;
     transform: translate(-50%, -50%);
 }
 
+.top-score {
+  height: 6rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 682;
+  font-size: 40px;
+  color: #F4EDED;
+}

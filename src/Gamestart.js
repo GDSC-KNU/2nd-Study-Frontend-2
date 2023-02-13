@@ -5,8 +5,10 @@ import imgA from "./image/moon.png";
 import imgB from "./image/star1.png";
 import imgC from "./image/star2.png";
 import imgD from "./image/scoreBadge.png";
+import imgE from "./image/coding.png";
 
 import Modal from "./Modal";
+import IntroModal from "./IntroModal";
 import Backdrop from "./Backdrop";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -29,6 +31,7 @@ const Title = styled.div`
 
 function Gamestart(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen2, setModalIsOpen2] = useState(false);
 
   function deleteHandler() {
     setModalIsOpen(true);
@@ -38,19 +41,27 @@ function Gamestart(props) {
     setModalIsOpen(false);
   }
 
+  function deleteHandler2() {
+    setModalIsOpen2(true);
+  }
+
+  function closeModalHandler2() {
+    setModalIsOpen2(false);
+  }
+
   return (
     <div>
       <Title
         fontsize={
           props.minWidth === 1024 && props.minWidth < 1300
             ? `${60}px`
-            : `${40}px`
+            : `${38}px`
         }
       >
         <h1>Catch Your Star!</h1>
       </Title>
       <div className="Moon">
-        <img src={imgA} width="290.18" height="278.59" alt="moon" />
+        <img src={imgA} width="300" height="278.59" alt="moon" />
       </div>
       <div className="star1">
         <img src={imgB} width="40" height="40" alt="star1" />
@@ -61,6 +72,11 @@ function Gamestart(props) {
       <div className="scoreTemplate" onClick={deleteHandler}>
         <div className="scoreBadge">
           <img src={imgD} width="70" height="70" alt="scoreBadge" />
+        </div>
+      </div>
+      <div className="introTemplate" onClick={deleteHandler2}>
+        <div className="introBadge">
+          <img src={imgE} width="70" height="70" alt="introBadge" />
         </div>
       </div>
       <div className="action">
@@ -74,6 +90,8 @@ function Gamestart(props) {
 
       {modalIsOpen && <Modal />}
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
+      {modalIsOpen2 && <IntroModal />}
+      {modalIsOpen2 && <Backdrop onCancel={closeModalHandler2} />}
     </div>
   );
 }

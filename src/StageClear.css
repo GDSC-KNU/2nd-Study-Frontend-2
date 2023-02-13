@@ -1,25 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 .sc-container {
-	text-align: center;
-	/* background-image: url(./image/1.jpg); */
-	color: white;
+  text-align: center;
+  /* background-image: url(./image/1.jpg); */
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.sc-h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #fed36b;
+  font-family: "DotGothic16", sans-serif;
 }
 
 .sc-timer-wrapper {
-	justify-content: center;
-	display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 .sc-timer-text {
-	width: 175px;
-	height: 175px;
-	border-radius: 100%;
-	background-color: white;
-	color: #3751769E;
-	font-size: 2.5rem;
-	font-weight: bold;
-	line-height: 175px;
+  width: 175px;
+  height: 175px;
+  border-radius: 100%;
+  background-color: white;
+  color: #3751769e;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 175px;
+  font-family: "DotGothic16", sans-serif;
 }
 
 .sc-info {
-	text-decoration: underline;
+  margin-top: 50px;
+  text-decoration: underline;
 }

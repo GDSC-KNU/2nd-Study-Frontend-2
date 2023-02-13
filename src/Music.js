@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import music3 from "./audios/10_유예근-My Victory.mp3";
 import music4 from "./audios/Story of the queen.mp3";
+import "./Music.css";
 
 import imgE from "./image/start.png";
 import imgF from "./image/stop.png";
 
 const useMultiAudio = (urls) => {
-  urls = { music: [music3] };
+  urls = { music: [music4] };
 
   const [sources] = useState(
     urls.music.map((url) => {
@@ -72,16 +73,16 @@ const Music = ({ urls }) => {
   const [players, toggle] = useMultiAudio(urls);
 
   return (
-    <div>
+    <>
       {players.map((player, i) => (
         <Player key={i} player={player} toggle={toggle(i)} />
       ))}
-    </div>
+    </>
   );
 };
 
 const Player = ({ player, toggle }) => (
-  <div>
+  <>
     <div className="soundBadge" onClick={toggle}>
       {player.playing ? (
         <img src={imgF} width="40" height="40" alt="scoreBadge" />
@@ -89,7 +90,7 @@ const Player = ({ player, toggle }) => (
         <img src={imgE} width="40" height="40" alt="scoreBadge" />
       )}
     </div>
-  </div>
+  </>
 );
 
 export default Music;
