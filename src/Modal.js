@@ -8,23 +8,21 @@ import imgE from "./image/Ellipse 5.png";
 import imgF from "./image/Ellipse 6.png";
 import imgG from "./image/Ellipse 7.png";
 import imgH from "./image/badge 1.png";
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Modal() {
   const [scores, setScores] = useState({});
   useEffect(() => {
     fetch("//localhost:8080/scores/list")
-    .then((response) => response.json())
-    .then((data) => setScores(data[data.length - 1]))
-    .catch((error) => console.log("error:", error));
+      .then((response) => response.json())
+      .then((data) => setScores(data[data.length - 1]))
+      .catch((error) => console.log("error:", error));
   }, []);
 
   return (
     <div className="Modal">
-      <div className="modalTitle">
-        <h1>Ranking</h1>
-      </div>
+      <div className="modalTitle">Ranking</div>
       <div className="rank First">
         <div className="circle circle1">
           <img src={imgE} width="50" height="50" alt="Ellipse 5" />
