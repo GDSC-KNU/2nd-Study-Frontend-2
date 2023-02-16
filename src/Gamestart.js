@@ -30,6 +30,9 @@ const Title = styled.div`
   }
 `;
 
+
+
+
 function Gamestart(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalIsOpen2, setModalIsOpen2] = useState(false);
