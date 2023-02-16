@@ -22,6 +22,7 @@
  
 <div align = center>
  <h2>CATCH YOUR STAR!🌟🌟(React Web Game)</h2>
+ <p>최대한 많은 점수를 얻어 사람들과 경쟁하세요🔥🔥</p>
  <p>반응형 웹 구현까지 완료( 일부 기종 지원 안됨 !!!)</p>
 <div align = center>
  
