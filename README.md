@@ -2,9 +2,9 @@
 
 GDSC KNU FRONTEND STUDY 2팀 TOY PROJECT
 
-CATCH YOUR STAR!(React Web Game)
+CATCH YOUR STAR!<img src="https://img.shields.io/badge/Starship-DD0B78?style=flat&logo=Starship&logoColor=white"/>(React Web Game)
 
-Tech Stack
+<img src="https://img.shields.io/badge/BookStack-0288D1?style=flat&logo=BookStack&logoColor=white"/>Tech Stack<img src="https://img.shields.io/badge/BookStack-0288D1?style=flat&logo=BookStack&logoColor=white"/>
 
  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/><img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
  
