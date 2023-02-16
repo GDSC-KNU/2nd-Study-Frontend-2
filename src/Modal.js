@@ -14,7 +14,7 @@ import { useEffect } from "react";
 function Modal() {
   const [scores, setScores] = useState({});
   useEffect(() => {
-    fetch("//localhost:8080/scores/list")
+    fetch("https://catch-your-star.herokuapp.com/scores/list")
       .then((response) => response.json())
       .then((data) => setScores(data[data.length - 1]))
       .catch((error) => console.log("error:", error));
@@ -30,7 +30,7 @@ function Modal() {
             <img src={imgB} width="40" height="40" alt="badge (2) 1" />
           </div>
         </div>
-        <div className="top-score">{scores.first}</div>
+        <div className="top-score">{scores.firstscore}</div>
       </div>
       <div className="Second">
         <div className="circle2">
@@ -39,7 +39,7 @@ function Modal() {
             <img src={imgA} width="40" height="40" alt="badge (1) 1" />
           </div>
         </div>
-        <div className="top-score">{scores.second}</div>
+        <div className="top-score">{scores.secondscore}</div>
       </div>
       <div className="Thrid">
         <div className="circle3">
@@ -48,19 +48,19 @@ function Modal() {
             <img src={imgD} width="40" height="40" alt="badge (4) 1" />
           </div>
         </div>
-        <div className="top-score">{scores.third}</div>
+        <div className="top-score">{scores.thirdscore}</div>
       </div>
       <div className="Fourth">
         <div className="circle4">
           <img src={imgC} width="40" height="40" alt="badge (3) 1" />
         </div>
-        <div className="top-score">{scores.fourth}</div>
+        <div className="top-score">{scores.fourthscore}</div>
       </div>
       <div className="Fifth">
         <div className="circle5">
           <img src={imgH} width="40" height="40" alt="badge 1" />
         </div>
-        <div className="top-score">{scores.fifth}</div>
+        <div className="top-score">{scores.fifthscore}</div>
       </div>
     </div>
   );

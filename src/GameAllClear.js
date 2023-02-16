@@ -44,95 +44,95 @@ function GameAllClear(props) {
   const score2 = localStorage.getItem("score2");
   const score3 = localStorage.getItem("score3");
   useEffect(() => {
-    fetch("//localhost:8080/scores/list")
+    fetch("https://catch-your-star.herokuapp.com/scores/list")
       .then((response) => response.json())
       .then((data) => setScores(data[data.length - 1]))
       .catch((error) => console.log(error));
   }, []);
-
+  //console.log(scores);
   const postScores = (first, second, third, fourth, fifth) => {
     const body = {
-      first: first,
-      second: second,
-      third: third,
-      fourth: fourth,
-      fifth: fifth,
+      firstscore: first,
+      secondscore: second,
+      thirdscore: third,
+      fourthscore: fourth,
+      fifthscore: fifth,
     };
-    console.log(body);
-    fetch("//localhost:8080/scores", {
+    //console.log(body);
+    fetch("https://catch-your-star.herokuapp.com/scores", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        first: first,
-        second: second,
-        third: third,
-        fourth: fourth,
-        fifth: fifth,
+        firstscore: first,
+        secondscore: second,
+        thirdscore: third,
+        fourthscore: fourth,
+        fifthscore: fifth,
       }),
     })
       .then((response) => response.json())
       .then((result) => console.log(result));
   };
 
-  if (parseInt(score1) + parseInt(score2) + parseInt(score3) > scores.fifth) {
+  if (parseInt(score1) + parseInt(score2) + parseInt(score3) > scores.fifthscore) {
     if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
-      scores.fourth
+      scores.fourthscore
     ) {
       // 새로운 5등
       postScores(
-        scores.first,
-        scores.second,
-        scores.third,
-        scores.fourth,
+        scores.firstscore,
+        scores.secondscore,
+        scores.thirdscore,
+        scores.fourthscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3)
       );
     } else if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
-      scores.third
+      scores.thirdscore
     ) {
       // 새로운 4등
       postScores(
-        scores.first,
-        scores.second,
-        scores.third,
+        scores.firstscore,
+        scores.secondscore,
+        scores.thirdscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.fifth
+        scores.fifthscore
       );
     } else if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
-      scores.second
+      scores.secondscore
     ) {
       // 새로운 3등
       postScores(
-        scores.first,
-        scores.second,
+        scores.firstscore,
+        scores.secondscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.fourth,
-        scores.fifth
+        scores.fourthscore,
+        scores.fifthscore
       );
     } else if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
-      scores.first
+      scores.firstscore
     ) {
       // 새로운 2등
       postScores(
-        scores.first,
+        scores.firstscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.third,
-        scores.fourth,
-        scores.fifth
+        scores.thirdscore,
+        scores.fourthscore,
+        scores.fifthscore
       );
     } else {
       // 새로운 1등
       postScores(
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.second,
-        scores.third,
-        scores.fourth,
-        scores.fifth
+        scores.secondscore,
+        scores.thirdscore,
+        scores.fourthscore,
+        scores.fifthscore
       );
     }
   }

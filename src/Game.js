@@ -117,7 +117,7 @@ function Game(props) {
           </div>
           <div>
             {/* Timer */}
-            <Timer mm={0} ss={20} count={count} />
+            <Timer mm={0} ss={2} count={count} />
           </div>
           <div>
             Score <span style={{ color: yellow }}>{count}</span>
