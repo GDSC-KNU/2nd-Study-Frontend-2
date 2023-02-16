@@ -24,6 +24,7 @@
  <h2>CATCH YOUR STAR!🌟🌟(React Web Game)</h2>
  <p>반응형 웹 구현까지 완료( 일부 기종 지원 안됨 !!!)</p>
 <div align = center>
+ 
 ![KakaoTalk_20230216_191825133](https://user-images.githubusercontent.com/48755156/219337808-7dc22b2f-28c1-42e8-9f4e-ab476097a45c.png)
 
 ### Game 화면
