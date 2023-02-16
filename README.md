@@ -6,7 +6,7 @@ CATCH YOUR STAR!(React Web Game)
 
 ![KakaoTalk_20230216_191825133](https://user-images.githubusercontent.com/48755156/219337808-7dc22b2f-28c1-42e8-9f4e-ab476097a45c.png)
 
-<img src="https://img.shields.io/badge/GitBook-#3884FF?style=flat&logo=GitBook&logoColor=white"/>
+ <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
 
 ### Game 화면
 
