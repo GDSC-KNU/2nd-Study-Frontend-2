@@ -4,9 +4,11 @@ GDSC KNU FRONTEND STUDY 2팀 TOY PROJECT
 
 CATCH YOUR STAR!(React Web Game)
 
-![KakaoTalk_20230216_191825133](https://user-images.githubusercontent.com/48755156/219337808-7dc22b2f-28c1-42e8-9f4e-ab476097a45c.png)
+Tech Stack
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/><img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
+ 
 
- <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
+![KakaoTalk_20230216_191825133](https://user-images.githubusercontent.com/48755156/219337808-7dc22b2f-28c1-42e8-9f4e-ab476097a45c.png)
 
 ### Game 화면
 
