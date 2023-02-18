@@ -99,7 +99,7 @@ function GameAllClear(props) {
         scores.secondscore,
         scores.thirdscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.fifthscore
+        scores.fourthscore
       );
     } else if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
@@ -110,8 +110,8 @@ function GameAllClear(props) {
         scores.firstscore,
         scores.secondscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
-        scores.fourthscore,
-        scores.fifthscore
+        scores.thirdscore,
+        scores.fourthscore
       );
     } else if (
       parseInt(score1) + parseInt(score2) + parseInt(score3) <
@@ -121,18 +121,18 @@ function GameAllClear(props) {
       postScores(
         scores.firstscore,
         parseInt(score1) + parseInt(score2) + parseInt(score3),
+        scores.secondscore,
         scores.thirdscore,
-        scores.fourthscore,
-        scores.fifthscore
+        scores.fourthscore
       );
     } else {
       // 새로운 1등
       postScores(
         parseInt(score1) + parseInt(score2) + parseInt(score3),
+        scores.firstscore,
         scores.secondscore,
         scores.thirdscore,
-        scores.fourthscore,
-        scores.fifthscore
+        scores.fourthscore
       );
     }
   }
